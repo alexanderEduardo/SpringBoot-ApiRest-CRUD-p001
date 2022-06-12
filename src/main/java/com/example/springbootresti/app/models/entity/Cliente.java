@@ -1,6 +1,10 @@
 package com.example.springbootresti.app.models.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,8 +15,19 @@ public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
+    @Size(min = 4,max = 12)
+    @Column(nullable = false)
     private String nombre;
+
+    @NotBlank
+    @Column(nullable = false)
     private String apellido;
+
+    @NotEmpty
+    @Email
+    @Column(nullable =false,unique = true)
     private String email;
 
     @Column(name = "create_At")
