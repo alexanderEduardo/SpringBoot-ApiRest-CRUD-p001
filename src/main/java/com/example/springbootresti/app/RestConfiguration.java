@@ -18,7 +18,10 @@ public class RestConfiguration {
                         .allowedOrigins("http://localhost:4200",
                                 "https://angular-springboot-restful.herokuapp.com/**")
                         .allowedMethods("GET","POST","DELETE","PUT")
-                        .allowedHeaders("*");
+                        .allowedHeaders("Access-Control-Allow-Origin","Access-Control-Allow-Headers",
+                                "Authorization","Content-Type","Origin",
+                                "Accept","X-Requested-With","Access-Control-Request-Method"
+                                ,"Access-Control-Request-Headers");
             }
         };
     }
