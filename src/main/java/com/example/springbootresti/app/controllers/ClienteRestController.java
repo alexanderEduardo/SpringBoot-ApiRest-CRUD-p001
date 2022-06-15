@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 //API REST - sino ponemos methods permite todos los tipos de como patch,get,etc
 //@CrossOrigin(origins = {"http://localhost:4200"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-@CrossOrigin(origins = {"${app.api.settings.cross-origin.urls}"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+//@CrossOrigin(origins = {"${app.api.settings.cross-origin.urls}"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 @RestController
 @RequestMapping("/api")
 public class ClienteRestController {
@@ -43,7 +43,7 @@ public class ClienteRestController {
             return new ResponseEntity<>(res,HttpStatus.INTERNAL_SERVER_ERROR);
         }
         if (cliente == null){
-            res.put("message","El cliente con el ID: ".concat(id.toString()).concat("no existe en la base de datos"));
+            res.put("message","El cliente con el ID: ".concat(id.toString()).concat(" no existe en la base de datos"));
             return new ResponseEntity<>(res,HttpStatus.NOT_FOUND);
         }
 
@@ -142,8 +142,13 @@ public class ClienteRestController {
         //Algo interesante es que si hacemos un deleteAll y despues un findAll jpa me devuelve una lista vacia pero no null
         return clienteService.findAll();
     }
-    
-    /**Este es un metodo para testear las cabeceras de la peticion no se usa en angular**/
+
+
+
+
+
+    /**Este es un metodo para testear las cabeceras de la peticion no se usa en angular y no forma parte
+     * de la apiRestFul**/
     @GetMapping("/host")
     public List<Object> getHost(HttpServletRequest request){
        String r1=request.getRemoteHost();
