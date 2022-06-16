@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class RestConfiguration {
 
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -24,5 +24,7 @@ public class RestConfiguration {
                                 ,"Access-Control-Request-Headers");
             }
         };
-    }
+    }*/
+
+
 }
