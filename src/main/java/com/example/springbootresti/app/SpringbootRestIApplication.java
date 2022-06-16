@@ -22,7 +22,7 @@ public class SpringbootRestIApplication {
                  .allowedOrigins("http://localhost:4200","https://angular-springboot-restful.herokuapp.com/**")
                  .allowedMethods("GET", "POST", "PUT", "DELETE")
                  .allowedHeaders("Content-Type", "X-Requested-With", "accept", "Origin"
-                         ,"Access-Control-Request-Method","Access-Control-Request-Headers")
+                         ,"Access-Control-Request-Method","Access-Control-Request-Headers","Access-Control-Allow-Origin")
                  .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials")
                         .allowCredentials(true)
                         .maxAge(3600);
