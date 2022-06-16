@@ -13,13 +13,13 @@ public class SpringbootRestIApplication {
         SpringApplication.run(SpringbootRestIApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                 .allowedOrigins("http://localhost:4200","https://angular-springboot-restful.herokuapp.com/**")
+                 .allowedOrigins("http://localhost:4200","https://angular-springboot-restful.herokuapp.com")
                  .allowedMethods("GET", "POST", "PUT", "DELETE")
                  .allowedHeaders("Content-Type", "X-Requested-With", "accept", "Origin"
                          ,"Access-Control-Request-Method","Access-Control-Request-Headers","Access-Control-Allow-Origin")
@@ -29,6 +29,6 @@ public class SpringbootRestIApplication {
                  }
 
                  };
-    }
+    }*/
 
 }

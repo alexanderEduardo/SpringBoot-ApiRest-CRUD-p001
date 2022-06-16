@@ -16,8 +16,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 //API REST - sino ponemos methods permite todos los tipos de como patch,get,etc
-//@CrossOrigin(origins = {"http://localhost:4200"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-//@CrossOrigin(origins = {"${app.api.settings.cross-origin.urls}"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+/*@CrossOrigin(origins = {"${app.api.settings.cross-origin.urls}"}
+        ,methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})*/
+@CrossOrigin(origins = {"https://angular-springboot-restful.herokuapp.com"},
+        methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 @RestController
 @RequestMapping("/api")
 public class ClienteRestController {
